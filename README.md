@@ -34,4 +34,5 @@ More on [soderlind.no](https://soderlind.no/)
 Follow me [@soderlind](https://twitter.com/soderlind)
 </td></tr></table>
 
+<a href="https://github.com/soderlind/soderlind/actions"><img src="https://github.com/soderlind/soderlind/workflows/Build%20README/badge.svg" align="right" alt="Build README"></a>
 <a href="https://simonwillison.net/2020/Jul/10/self-updating-profile-readme/">How this works</a>

@@ -26,7 +26,8 @@ def replace_chunk(content, marker, chunk, inline=False):
     )
     if not inline:
         chunk = "\n{}\n".format(chunk)
-    chunk = "<!-- {} starts -->{}<!-- {} ends -->".format(marker, chunk, marker)
+    chunk = "<!-- {} starts -->{}<!-- {} ends -->".format(
+        marker, chunk, marker)
     return r.sub(chunk, content)
 
 
@@ -34,25 +35,25 @@ def make_query(after_cursor=None):
     return """
 query {
   viewer {
-    repositories(first: 100, privacy: PUBLIC, after:AFTER) {
-      pageInfo {
-        hasNextPage
-        endCursor
-      }
-      nodes {
-        name
-        description
-        url
-        releases(last:1) {
-          totalCount
-          nodes {
-            name
-            publishedAt
-            url
-          }
-        }
-      }
-    }
+	repositories(first: 100, privacy: PUBLIC, after:AFTER) {
+	  pageInfo {
+		hasNextPage
+		endCursor
+	  }
+	  nodes {
+		name
+		description
+		url
+		releases(last:1) {
+		  totalCount
+		  nodes {
+			name
+			publishedAt
+			url
+		  }
+		}
+	  }
+	}
   }
 }
 """.replace(
@@ -108,29 +109,32 @@ def fetch_releases(oauth_token):
 #         params={"sql": sql, "_shape": "array",},
 #     ).json()
 def fetch_tweets():
-	auth = tweepy.OAuthHandler(TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET)
-	auth.set_access_token(TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET)
-	api = tweepy.API(auth)
-	return [
-		{
+    auth = tweepy.OAuthHandler(TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET)
+    auth.set_access_token(TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET)
+    api = tweepy.API(auth)
+    return [
+        {
             "title": entry.text,
             # "url": entry.entities["urls"][0]["expanded_url"],
-			"url": "nn",
+            "url": "nn",
             "published": entry.created_at.strftime('%d.%m.%Y'),
-		}
-		for entry in api.user_timeline()
-	]
+        }
+        for entry in api.user_timeline()
+    ]
+
 
 def fetch_read():
-    entries = feedparser.parse("https://getpocket.com/users/soderlind/feed/all")["entries"]
+    entries = feedparser.parse(
+        "https://getpocket.com/users/soderlind/feed/all")["entries"]
     return [
         {
             "title": entry["title"],
             "url": entry["link"].split("#")[0],
-            "published": time.strftime('%d.%m.%Y',entry["updated_parsed"]),
+            "published": time.strftime('%d.%m.%Y', entry["updated_parsed"]),
         }
         for entry in entries
     ]
+
 
 def fetch_blog_entries():
     entries = feedparser.parse("https://soderlind.no/feed.xml")["entries"]
@@ -138,7 +142,7 @@ def fetch_blog_entries():
         {
             "title": entry["title"],
             "url": entry["link"].split("#")[0],
-            "published": time.strftime('%d.%m.%Y',entry["updated_parsed"]),
+            "published": time.strftime('%d.%m.%Y', entry["updated_parsed"]),
         }
         for entry in entries
     ]
@@ -149,63 +153,65 @@ if __name__ == "__main__":
     project_releases = root / "releases.md"
     releases = fetch_releases(TOKEN)
     releases.sort(key=lambda r: r["published_at"], reverse=True)
-    # md = "\n".join(
-    #     [
-    #         "* [{repo} {release}]({url}) - {published_day}".format(**release)
-    #         for release in releases[:8]
-    #     ]
-    # )
-    # readme_contents = readme.open().read()
-    # rewritten = replace_chunk(readme_contents, "recent_releases", md)
-
-    # # Write out full project-releases.md file
-    # project_releases_md = "\n".join(
-    #     [
-    #         (
-    #             "* **[{repo}]({repo_url})**: [{release}]({url}) - {published_day}\n"
-    #             "<br>{description}"
-    #         ).format(**release)
-    #         for release in releases
-    #     ]
-    # )
-    # project_releases_content = project_releases.open().read()
-    # project_releases_content = replace_chunk(
-    #     project_releases_content, "recent_releases", project_releases_md
-    # )
-    # project_releases_content = replace_chunk(
-    #     project_releases_content, "release_count", str(len(releases)), inline=True
-    # )
-    # project_releases.open("w").write(project_releases_content)
-
-    # tils = fetch_tils()
-    # tils_md = "\n".join(
-    #     [
-    #         "* [{title}]({url}) - {created_at}".format(
-    #             title=til["title"],
-    #             url=til["url"],
-    #             created_at=til["created_utc"].split("T")[0],
-    #         )
-    #         for til in tils
-    #     ]
-    # )
-    # rewritten = replace_chunk(rewritten, "tils", tils_md)
+    md = "\n".join(
+        [
+            "* [{repo} {release}]({url}) - {published_day}".format(**release)
+            for release in releases[:8]
+        ]
+    )
+    readme_contents = readme.open().read()
+    rewritten = replace_chunk(readme_contents, "recent_releases", md)
 
     entries = fetch_tweets()[:5]
     tweet_md = "\n".join(
-        ["* [{title}]({url}) - {published}".format(**entry) for entry in entries]
+        ["* [{title}]({url}) - {published}".format(**entry)
+         for entry in entries]
     )
-    rewritten = replace_chunk(rewritten, "recent_releases", tweet_md)
+	rewritten = replace_chunk(rewritten, "read", tweet_md)
 
-    entries = fetch_read()[:5]
-    read_md = "\n".join(
-        ["* [{title}]({url}) - {published}".format(**entry) for entry in entries]
-    )
-    rewritten = replace_chunk(rewritten, "read", read_md)
+	entries = fetch_read()[:5]
+	read_md = "\n".join(
+		["* [{title}]({url}) - {published}".format(**entry)
+		for entry in entries]
+	)
+	rewritten = replace_chunk(rewritten, "read", read_md)
 
-    entries = fetch_blog_entries()[:5]
-    entries_md = "\n".join(
-        ["* [{title}]({url}) - {published}".format(**entry) for entry in entries]
-    )
-    rewritten = replace_chunk(rewritten, "blog", entries_md)
+	entries = fetch_blog_entries()[:5]
+	entries_md = "\n".join(
+		["* [{title}]({url}) - {published}".format(**entry)
+		for entry in entries]
+	)
+	rewritten = replace_chunk(rewritten, "blog", entries_md)
 
-    readme.open("w").write(rewritten)
+	readme.open("w").write(rewritten)
+# # Write out full project-releases.md file
+# project_releases_md = "\n".join(
+#     [
+#         (
+#             "* **[{repo}]({repo_url})**: [{release}]({url}) - {published_day}\n"
+#             "<br>{description}"
+#         ).format(**release)
+#         for release in releases
+#     ]
+# )
+# project_releases_content = project_releases.open().read()
+# project_releases_content = replace_chunk(
+#     project_releases_content, "recent_releases", project_releases_md
+# )
+# project_releases_content = replace_chunk(
+#     project_releases_content, "release_count", str(len(releases)), inline=True
+# )
+# project_releases.open("w").write(project_releases_content)
+
+# tils = fetch_tils()
+# tils_md = "\n".join(
+#     [
+#         "* [{title}]({url}) - {created_at}".format(
+#             title=til["title"],
+#             url=til["url"],
+#             created_at=til["created_utc"].split("T")[0],
+#         )
+#         for til in tils
+#     ]
+# )
+# rewritten = replace_chunk(rewritten, "tils", tils_md)

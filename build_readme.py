@@ -113,7 +113,7 @@ def fetch_tweets():
 	api = tweepy.API(auth)
 	return [
 		{
-            "title": entry["title"],
+            "title": entry["text"],
             "url": entry["entities"]["expanded_url"].split("#")[0],
             "published": time.strftime('%d.%m.%Y',entry["created_at"]),
 		}

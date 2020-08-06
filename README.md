@@ -26,14 +26,11 @@ More on [soderlind.no](https://soderlind.no/)
 
 ### Read
 <!-- tweet starts -->
-* [@twigpress @stephBoisvert .. must be pure luck](https://twitter.com/user/status/1290954208976527360) - 05.08.2020
-* [@twigpress @stephBoisvert How/when do you call “activate_plugin”? I use it on my multisite and it’s not breaking my media upload view](https://twitter.com/user/status/1290953872123600903) - 05.08.2020
-* [@jasonbahl @wpgraphql We use https://t.co/jPWeMyD5oC](https://twitter.com/user/status/1290952163909402624) - 05.08.2020
-* [@ctrlshifti @ctrlshifti , your code is badly formatted 
-, should be https://t.co/UZo2gBZFW1](https://twitter.com/user/status/1288908872946790400) - 30.07.2020
-* [RT @markjaquith: There is SO MUCH good stuff coming in PHP 8. Stuff that I will absolutely use daily. And it comes out on my birthday. 🥳
-
-h…](https://twitter.com/user/status/1287167516859682820) - 25.07.2020
+* [@twigpress@stephBoisvert..mustbepureluck](https://twitter.com/user/status/1290954208976527360) - 05.08.2020
+* [@twigpress@stephBoisvertHow/whendoyoucall“activate_plugin”?Iuseitonmymultisiteandit’snotbreakingmymediauploadview](https://twitter.com/user/status/1290953872123600903) - 05.08.2020
+* [@jasonbahl@wpgraphqlWeusehttps://t.co/jPWeMyD5oC](https://twitter.com/user/status/1290952163909402624) - 05.08.2020
+* [@ctrlshifti@ctrlshifti,yourcodeisbadlyformatted,shouldbehttps://t.co/UZo2gBZFW1](https://twitter.com/user/status/1288908872946790400) - 30.07.2020
+* [RT@markjaquith:ThereisSOMUCHgoodstuffcominginPHP8.StuffthatIwillabsolutelyusedaily.Anditcomesoutonmybirthday.🥳h…](https://twitter.com/user/status/1287167516859682820) - 25.07.2020
 <!-- tweet ends -->
 </td></tr></table>
 

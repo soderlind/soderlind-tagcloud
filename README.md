@@ -4,14 +4,14 @@
 
 ### Recent releases
 <!-- recent_releases starts -->
-* [@twigpress @stephBoisvert .. must be pure luck]() - 05.08.2020
-* [@twigpress @stephBoisvert How/when do you call “activate_plugin”? I use it on my multisite and it’s not breaking my media upload view]() - 05.08.2020
-* [@jasonbahl @wpgraphql We use https://t.co/jPWeMyD5oC](https://t.co/jPWeMyD5oC) - 05.08.2020
+* [@twigpress @stephBoisvert .. must be pure luck](http://twitter.com/download/iphone) - 05.08.2020
+* [@twigpress @stephBoisvert How/when do you call “activate_plugin”? I use it on my multisite and it’s not breaking my media upload view](http://twitter.com/download/iphone) - 05.08.2020
+* [@jasonbahl @wpgraphql We use https://t.co/jPWeMyD5oC](http://twitter.com/download/iphone) - 05.08.2020
 * [@ctrlshifti @ctrlshifti , your code is badly formatted 
-, should be https://t.co/UZo2gBZFW1]() - 30.07.2020
+, should be https://t.co/UZo2gBZFW1](https://mobile.twitter.com) - 30.07.2020
 * [RT @markjaquith: There is SO MUCH good stuff coming in PHP 8. Stuff that I will absolutely use daily. And it comes out on my birthday. 🥳
 
-h…]() - 25.07.2020
+h…](https://mobile.twitter.com) - 25.07.2020
 <!-- recent_releases ends -->
 More [recent releases](https://github.com/soderlind/soderlind/blob/main/releases.md)
 </td><td valign="top" width="34%">

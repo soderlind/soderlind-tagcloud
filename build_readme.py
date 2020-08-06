@@ -117,7 +117,7 @@ def fetch_tweets():
             "title": entry.text,
             # "url": entry.entities["urls"][0]["expanded_url"],
             # "url": ' '.join(url['url'] for url in entry.entities["urls"])
-         	"url": entry.source_url,
+           	"url": 'https://twitter.com/user/status/'.join(entry.id_str),
             "published": entry.created_at.strftime('%d.%m.%Y'),
         }
         for entry in api.user_timeline('soderlind')

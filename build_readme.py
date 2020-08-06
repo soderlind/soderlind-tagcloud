@@ -109,7 +109,7 @@ def fetch_read():
         {
             "title": entry["title"],
             "url": entry["link"].split("#")[0],
-            "published": entry["published"].strftime("%d.%m.%Y"),
+            "published": entry["updated_parsed"].strftime("%d.%m.%Y"),
         }
         for entry in entries
     ]

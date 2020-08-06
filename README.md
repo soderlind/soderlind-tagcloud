@@ -26,14 +26,15 @@ More on [soderlind.no](https://soderlind.no/)
 
 ### Read
 <!-- tweet starts -->
-* [@twigpress @stephBoisvert .. must be pure luck](https://twitter.com/user/status/1290954208976527360) - 05.08.2020
-* [@twigpress @stephBoisvert How/when do you call “activate_plugin”? I use it on my multisite and it’s not breaking my media upload view](https://twitter.com/user/status/1290953872123600903) - 05.08.2020
-* [@jasonbahl @wpgraphql We use https://t.co/jPWeMyD5oC](https://twitter.com/user/status/1290952163909402624) - 05.08.2020
-* [@ctrlshifti @ctrlshifti , your code is badly formatted 
-, should be https://t.co/UZo2gBZFW1](https://twitter.com/user/status/1288908872946790400) - 30.07.2020
 * [RT @markjaquith: There is SO MUCH good stuff coming in PHP 8. Stuff that I will absolutely use daily. And it comes out on my birthday. 🥳
 
 h…](https://twitter.com/user/status/1287167516859682820) - 25.07.2020
+* [Congrats @lukechesser, @XWP and @unsplash, learning a lot of reading the code. Is the plugin available at GitHub? I have a feature request.](https://twitter.com/user/status/1286009620146851841) - 22.07.2020
+* [RT @XWP: Huge news from the world of #WordPress: you can now search for and add images to your site with ease thanks to the new @unsplash p…](https://twitter.com/user/status/1285695750492520451) - 21.07.2020
+* [RT @smashingmag: User Frustrations in 2020: please avoid them if possible. https://t.co/HwqZI4RVyb https://t.co/2TTCAlQR39](https://twitter.com/user/status/1285694310055317505) - 21.07.2020
+* [RT @umaar: This is a excellent resource for explaining the vocabulary of CSS code
+
+Learn the difference between a Media Feature, Combinator…](https://twitter.com/user/status/1283765349268238337) - 16.07.2020
 <!-- tweet ends -->
 </td></tr></table>
 

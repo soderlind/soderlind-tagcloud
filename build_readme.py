@@ -154,14 +154,14 @@ if __name__ == "__main__":
     project_releases = root / "releases.md"
     releases = fetch_releases(TOKEN)
     releases.sort(key=lambda r: r["published_at"], reverse=True)
-    md = "\n".join(
-        [
-            "* [{repo} {release}]({url}) - {published_day}".format(**release)
-            for release in releases[:8]
-        ]
-    )
-    readme_contents = readme.open().read()
-    rewritten = replace_chunk(readme_contents, "recent_releases", md)
+    # md = "\n".join(
+    #     [
+    #         "* [{repo} {release}]({url}) - {published_day}".format(**release)
+    #         for release in releases[:8]
+    #     ]
+    # )
+    # readme_contents = readme.open().read()
+    # rewritten = replace_chunk(readme_contents, "recent_releases", md)
 
     entries = fetch_tweets()[:5]
 
@@ -169,7 +169,8 @@ if __name__ == "__main__":
         ["* [{title}]({url}) - {published}".format(**entry)
          for entry in entries]
     )
-    rewritten = replace_chunk(rewritten, "recent_releases", tweet_md)
+    readme_contents = readme.open().read()
+    rewritten = replace_chunk(readme_contents, "tweet", tweet_md)
 
     entries = fetch_read()[:5]
     read_md = "\n".join(

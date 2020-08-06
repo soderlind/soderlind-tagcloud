@@ -114,14 +114,13 @@ def fetch_tweets():
     api = tweepy.API(auth)
     return [
         {
-            "title": entry.text,
+            "title": entry.full_text,
             # "url": entry.entities["urls"][0]["expanded_url"],
             # "url": ' '.join(url['url'] for url in entry.entities["urls"])
            	"url": 'https://twitter.com/user/status/' + entry.id_str,
             "published": entry.created_at.strftime('%d.%m.%Y'),
         }
-		for entry in tweepy.Cursor(api.user_timeline, exclude_replies=True)
-		# for entry in api.user_timeline('soderlind')
+		for entry in api.user_timeline('soderlind')
     ]
 
 

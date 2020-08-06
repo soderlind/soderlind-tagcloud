@@ -155,7 +155,7 @@ if __name__ == "__main__":
     #         for release in releases[:8]
     #     ]
     # )
-    # readme_contents = readme.open().read()
+    readme_contents = readme.open().read()
     # rewritten = replace_chunk(readme_contents, "recent_releases", md)
 
     # # Write out full project-releases.md file
@@ -194,8 +194,8 @@ if __name__ == "__main__":
     tweet_md = "\n".join(
         ["* [{title}]({url}) - {published}".format(**entry) for entry in entries]
     )
-	readme_contents = readme.open().read()
-    rewritten = replace_chunk(readme_contents, "recent_releases", tweet_md)
+
+	rewritten = replace_chunk(readme_contents, "recent_releases", tweet_md)
 
     entries = fetch_read()[:5]
     read_md = "\n".join(

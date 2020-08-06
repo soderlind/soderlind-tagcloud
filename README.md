@@ -11,11 +11,11 @@ More [recent releases](https://github.com/soderlind/soderlind/blob/main/releases
 
 ### On my blog
 <!-- blog starts -->
-* [How to import native ES modules in WordPress](https://soderlind.no/how-to-import-native-es-modules-in-wordpress/) - Wed, 04 Dec 2019 00:00:00 +0000
-* [add_theme_support( 'disable_block_style')](https://soderlind.no/add-theme-support-disable-block-style/) - 
-* [Hide block styles in Gutenberg](https://soderlind.no/hide-block-styles-in-gutenberg/) - Fri, 18 Oct 2019 00:00:00 +0000
-* [Local by Flywheel: Using WordMove to mirror sites](https://soderlind.no/local-by-flywheel-using-wordmove-to-mirror-sites/) - Mon, 30 Sep 2019 00:00:00 +0000
-* [Learn to code!](https://soderlind.no/learn-to-code/) - Fri, 21 Dec 2018 00:00:00 +0000
+* [How to import native ES modules in WordPress](https://soderlind.no/how-to-import-native-es-modules-in-wordpress/) - 04.12.2019
+* [add_theme_support( 'disable_block_style')](https://soderlind.no/add-theme-support-disable-block-style/) - 07.11.2019
+* [Hide block styles in Gutenberg](https://soderlind.no/hide-block-styles-in-gutenberg/) - 18.10.2019
+* [Local by Flywheel: Using WordMove to mirror sites](https://soderlind.no/local-by-flywheel-using-wordmove-to-mirror-sites/) - 30.09.2019
+* [Learn to code!](https://soderlind.no/learn-to-code/) - 21.12.2018
 <!-- blog ends -->
 More on [soderlind.no](https://soderlind.no/)
 </td><td valign="top" width="33%">

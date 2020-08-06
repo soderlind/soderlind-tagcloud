@@ -194,7 +194,8 @@ if __name__ == "__main__":
     tweet_md = "\n".join(
         ["* [{title}]({url}) - {published}".format(**entry) for entry in entries]
     )
-    rewritten = replace_chunk(rewritten, "recent_releases", tweet_md)
+	readme_contents = readme.open().read()
+    rewritten = replace_chunk(readme_contents, "recent_releases", tweet_md)
 
     entries = fetch_read()[:5]
     read_md = "\n".join(

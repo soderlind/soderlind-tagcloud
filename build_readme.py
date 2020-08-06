@@ -120,7 +120,7 @@ def fetch_tweets():
            	"url": 'https://twitter.com/user/status/' + entry.id_str,
             "published": entry.created_at.strftime('%d.%m.%Y'),
         }
-		for entry in tweepy.Cursor(api.user_timeline, exclude_replies=True).items(5):
+		for entry in tweepy.Cursor(api.user_timeline, exclude_replies=True).items(5)
 		# for entry in api.user_timeline('soderlind')
     ]
 

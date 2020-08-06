@@ -4,14 +4,11 @@
 
 ### Recent releases
 <!-- recent_releases starts -->
-* [@twigpress @stephBoisvert .. must be pure luck]() - 05.08.2020
-* [@twigpress @stephBoisvert How/when do you call “activate_plugin”? I use it on my multisite and it’s not breaking my media upload view]() - 05.08.2020
-* [@jasonbahl @wpgraphql We use https://t.co/jPWeMyD5oC](https://www.mnemonic.no) - 05.08.2020
-* [@ctrlshifti @ctrlshifti , your code is badly formatted 
-, should be https://t.co/UZo2gBZFW1]() - 30.07.2020
-* [RT @markjaquith: There is SO MUCH good stuff coming in PHP 8. Stuff that I will absolutely use daily. And it comes out on my birthday. 🥳
-
-h…]() - 25.07.2020
+* [I feel like William of Ockham had something to say about all this...]() - 06.08.2020
+* [And who is funding the mask lobby? Is it the fabric companies or the sowing machine companies or the 3d printing companies? I can't tell.]() - 06.08.2020
+* [Of course there's also the question of who is coordinating the many different competing vaccine manufacturers so th… https://t.co/6HyLKGrt6o](https://twitter.com/i/web/status/1291458445585989632) - 06.08.2020
+* [I wonder where and when all the coordination meetings took place. I mean, many of these nations rarely talk to each… https://t.co/RpCu53WVvx](https://twitter.com/i/web/status/1291458444747104257) - 06.08.2020
+* [So if we are to believe the COVID conspiracy theorists, all the governments of the world, you know, the people who… https://t.co/pwUyLusrpX](https://twitter.com/i/web/status/1291456936064380928) - 06.08.2020
 <!-- recent_releases ends -->
 More [recent releases](https://github.com/soderlind/soderlind/blob/main/releases.md)
 </td><td valign="top" width="34%">

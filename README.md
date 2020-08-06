@@ -22,11 +22,11 @@ More on [soderlind.no](https://soderlind.no/)
 
 ### Read
 <!-- read starts -->
-* [Miscellaneous Developer Focused Changes in WordPress 5.5](https://make.wordpress.org/core/2020/07/29/miscellaneous-developer-focused-changes-in-wordpress-5-5) - Wed, 29 Jul 2020 02:14:16 -0500
-* [New in PHP 8](https://stitcher.io/blog/new-in-php-8) - Sat, 25 Jul 2020 18:25:25 -0500
-* [New wp_get_environment_type() function in WordPress 5.5](https://make.wordpress.org/core/2020/07/24/new-wp_get_environment_type-function-in-wordpress-5-5) - Fri, 24 Jul 2020 18:30:30 -0500
-* [RSS Feeds for WordPress Plugin and Theme Support Forum Topics and Replies](https://kaspars.net/blog/wp-org-support-forum-rss-replies) - Fri, 24 Jul 2020 12:50:39 -0500
-* [New XML Sitemaps Functionality in WordPress 5.5](https://make.wordpress.org/core/2020/07/22/new-xml-sitemaps-functionality-in-wordpress-5-5) - Wed, 22 Jul 2020 19:08:53 -0500
+* [Miscellaneous Developer Focused Changes in WordPress 5.5](https://make.wordpress.org/core/2020/07/29/miscellaneous-developer-focused-changes-in-wordpress-5-5) - 29.07.2020
+* [New in PHP 8](https://stitcher.io/blog/new-in-php-8) - 25.07.2020
+* [New wp_get_environment_type() function in WordPress 5.5](https://make.wordpress.org/core/2020/07/24/new-wp_get_environment_type-function-in-wordpress-5-5) - 24.07.2020
+* [RSS Feeds for WordPress Plugin and Theme Support Forum Topics and Replies](https://kaspars.net/blog/wp-org-support-forum-rss-replies) - 24.07.2020
+* [New XML Sitemaps Functionality in WordPress 5.5](https://make.wordpress.org/core/2020/07/22/new-xml-sitemaps-functionality-in-wordpress-5-5) - 23.07.2020
 <!-- read ends -->
 </td></tr></table>
 

@@ -110,7 +110,6 @@ def fetch_read():
         {
             "title": entry["title"],
             "url": entry["link"].split("#")[0],
-            # "published": datetime.datetime.strptime(entry["published"], "%d.%m.%Y"),
             "published": time.strftime('%d.%m.%Y',entry["updated_parsed"]),
         }
         for entry in entries
@@ -122,7 +121,7 @@ def fetch_blog_entries():
         {
             "title": entry["title"],
             "url": entry["link"].split("#")[0],
-            "published": entry["published"].split("T")[0],
+            "published": time.strftime('%d.%m.%Y',entry["updated_parsed"]),
         }
         for entry in entries
     ]

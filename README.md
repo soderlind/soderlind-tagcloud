@@ -15,11 +15,11 @@ More on [soderlind.no](https://soderlind.no/)
 
 ### Read
 <!-- read starts -->
+* [WordPress 5.5 Field Guide](https://make.wordpress.org/core/2020/07/30/wordpress-5-5-field-guide) - 06.08.2020
 * [Miscellaneous Developer Focused Changes in WordPress 5.5](https://make.wordpress.org/core/2020/07/29/miscellaneous-developer-focused-changes-in-wordpress-5-5) - 29.07.2020
 * [New in PHP 8](https://stitcher.io/blog/new-in-php-8) - 25.07.2020
 * [New wp_get_environment_type() function in WordPress 5.5](https://make.wordpress.org/core/2020/07/24/new-wp_get_environment_type-function-in-wordpress-5-5) - 24.07.2020
 * [RSS Feeds for WordPress Plugin and Theme Support Forum Topics and Replies](https://kaspars.net/blog/wp-org-support-forum-rss-replies) - 24.07.2020
-* [New XML Sitemaps Functionality in WordPress 5.5](https://make.wordpress.org/core/2020/07/22/new-xml-sitemaps-functionality-in-wordpress-5-5) - 23.07.2020
 <!-- read ends -->
 </td><td valign="top" width="33%">
 

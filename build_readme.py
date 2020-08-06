@@ -114,7 +114,7 @@ def fetch_tweets():
 	return [
 		{
             "title": entry.text,
-            "url": entry.entities.urls[0]["expanded_url"],
+            "url": entry.entities["urls"]["expanded_url"],
             "published": time.strftime('%d.%m.%Y',entry.created_at),
 		}
 		for entry in api.user_timeline(tweetmode="extended")

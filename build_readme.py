@@ -1,6 +1,6 @@
 from python_graphql_client import GraphqlClient
 import feedparser
-import datetime
+import time
 import httpx
 import json
 import pathlib
@@ -110,7 +110,8 @@ def fetch_read():
         {
             "title": entry["title"],
             "url": entry["link"].split("#")[0],
-            "published": datetime.datetime.strptime(entry["published"], "%d.%m.%Y"),
+            # "published": datetime.datetime.strptime(entry["published"], "%d.%m.%Y"),
+            "published": time.strftime('%d.%m.%Y',entry["updated_parsed"]),
         }
         for entry in entries
     ]

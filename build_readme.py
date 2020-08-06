@@ -163,27 +163,29 @@ if __name__ == "__main__":
     rewritten = replace_chunk(readme_contents, "recent_releases", md)
 
     entries = fetch_tweets()[:5]
+
     tweet_md = "\n".join(
         ["* [{title}]({url}) - {published}".format(**entry)
          for entry in entries]
     )
-	rewritten = replace_chunk(rewritten, "read", tweet_md)
+    rewritten = replace_chunk(rewritten, "recent_releases", tweet_md)
 
-	entries = fetch_read()[:5]
-	read_md = "\n".join(
-		["* [{title}]({url}) - {published}".format(**entry)
-		for entry in entries]
-	)
-	rewritten = replace_chunk(rewritten, "read", read_md)
+    entries = fetch_read()[:5]
+    read_md = "\n".join(
+        ["* [{title}]({url}) - {published}".format(**entry)
+         for entry in entries]
+    )
+    rewritten = replace_chunk(rewritten, "read", read_md)
 
-	entries = fetch_blog_entries()[:5]
-	entries_md = "\n".join(
-		["* [{title}]({url}) - {published}".format(**entry)
-		for entry in entries]
-	)
-	rewritten = replace_chunk(rewritten, "blog", entries_md)
+    entries = fetch_blog_entries()[:5]
+    entries_md = "\n".join(
+        ["* [{title}]({url}) - {published}".format(**entry)
+         for entry in entries]
+    )
+    rewritten = replace_chunk(rewritten, "blog", entries_md)
 
-	readme.open("w").write(rewritten)
+    readme.open("w").write(rewritten)
+
 # # Write out full project-releases.md file
 # project_releases_md = "\n".join(
 #     [

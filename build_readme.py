@@ -114,7 +114,7 @@ def fetch_tweets():
     api = tweepy.API(auth)
     return [
         {
-            "title": entry.full_text,
+            "title": entry.text,
             # "url": entry.entities["urls"][0]["expanded_url"],
             # "url": ' '.join(url['url'] for url in entry.entities["urls"])
            	"url": 'https://twitter.com/user/status/' + entry.id_str,

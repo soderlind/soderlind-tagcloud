@@ -111,10 +111,12 @@ def fetch_tweets():
 	auth = tweepy.OAuthHandler(TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET)
 	auth.set_access_token(TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET)
 	api = tweepy.API(auth)
+	decode =
 	return [
 		{
             "title": entry.text,
-            "url": entry.entities["urls"][0].expanded_url,
+            # "url": entry.entities["urls"][0]["expanded_url"],
+			"url": "nn",
             "published": time.strftime('%d.%m.%Y',entry.created_at),
 		}
 		for entry in api.user_timeline()

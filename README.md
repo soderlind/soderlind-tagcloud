@@ -4,7 +4,7 @@
 
 ### My WordPress plugins
 <!-- plugins starts -->
-* [None](https://github.com/soderlind/actions) (0)
+
 <!-- plugins ends -->
 
 More on [soderlind.no](https://soderlind.no/)

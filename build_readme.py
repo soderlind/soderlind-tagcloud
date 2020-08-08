@@ -3,6 +3,7 @@ import feedparser
 import tweepy
 import time
 import httpx
+import requests
 import json
 import pathlib
 import re

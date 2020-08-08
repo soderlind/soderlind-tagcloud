@@ -98,7 +98,7 @@ if __name__ == "__main__":
 	md = "\n".join(
 		[
 			# "<h{font_size}>[{description}]({url}) ({fork_count})</h{font_size}> ".format(**plugin)
-			"<h{font_size} class="bg-gray-light"><a href={url}>{description}</a></h{font_size}> ".format(
+			"<h{font_size} class='bg-gray-light'><a href={url}>{description}</a></h{font_size}> ".format(
 				**plugin)
 			for plugin in plugins[:20]
 		]

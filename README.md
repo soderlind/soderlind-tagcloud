@@ -4,26 +4,26 @@
 
 ### My WordPress plugins
 <!-- plugins starts -->
-<a href='https://github.com/soderlind/read-offline' style='font-size:16px;'>Read Offline allows you to download or print posts and pages. You can download the post as PDF, ePub and mobi</a> (9)
-<a href='https://github.com/soderlind/date-range-ninja-forms' style='font-size:48px;'>Date Range field for Ninja Forms</a> (3)
-<a href='https://github.com/soderlind/coding-standard' style='font-size:0px;'>A PHP CodeSniffer sniff that checks if the global PHP functions are missing a backslash.</a> (0)
-<a href='https://github.com/soderlind/es6-wp-ajax-demo' style='font-size:16px;'>ES6 WordPress Ajax Demo</a> (1)
-<a href='https://github.com/soderlind/additional-javascript' style='font-size:48px;'>Use WordPress Customizer to add JavaScript</a> (3)
-<a href='https://github.com/soderlind/wp-denyhost' style='font-size:16px;'>WP-DenyHost denies a spammer from accessing your WordPress blog</a> (1)
-<a href='https://github.com/soderlind/ninja-forms-dss-event-action' style='font-size:0px;'>Ninja Forms Action for DSS Events</a> (0)
-<a href='https://github.com/soderlind/class-customizer-toggle-control' style='font-size:80px;'>WordPress Customizer Toggle Control is a generic toggle control you can use to replace the checkbox control.</a> (13)
-<a href='https://github.com/soderlind/wp-cli-acfpro-activate' style='font-size:0px;'>Activate ACF PRO license using WP CLI</a> (0)
-<a href='https://github.com/soderlind/wxr2pdf' style='font-size:0px;'>Convert an WordPress Export File to PDF</a> (0)
-<a href='https://github.com/soderlind/class-customizer-range-value-control' style='font-size:32px;'>WordPress Customizer Range Value Control is a generic range with value control you can use to replace the default range control.</a> (10)
-<a href='https://github.com/soderlind/customizer-polylang' style='font-size:0px;'>An add-in that gives you full Polylang support in WordPress customizer.</a> (16)
-<a href='https://github.com/soderlind/ms-searchwp-subsite-activate' style='font-size:0px;'>Automatically Activate SearchWP on Subsite</a> (0)
-<a href='https://github.com/soderlind/vscode-phpcbf' style='font-size:0px;'>PHP Code Beautifier and Fixer for Visual Studio Code</a> (8)
-<a href='https://github.com/soderlind/wp-link-to-playlist-item' style='font-size:0px;'>The plugin makes it possible to link to a playlist item </a> (0)
-<a href='https://github.com/soderlind/my-permalink-demo' style='font-size:0px;'>Demo plugin to show how to implement your custom permalink for your WordPress plugin.</a> (0)
-<a href='https://github.com/soderlind/cloud2png' style='font-size:16px;'>Cloud2PNG captures snapshots of any website using the Cloudinary URL2PNG add-on</a> (1)
-<a href='https://github.com/soderlind/debug-bar-list-dependencies' style='font-size:16px;'>WordPress Debug Bar, List Script & Style Dependencies</a> (1)
-<a href='https://github.com/soderlind/delicious-tagroll-shortcode' style='font-size:0px;'>WordPress shortcode that creates a Delicious tag cloud or a list of tags</a> (0)
-<a href='https://github.com/soderlind/metro-share-social-fonts' style='font-size:0px;'>Replace the default Metro Share social icons with icomoon social fonts</a> (0)
+#[Read Offline allows you to download or print posts and pages. You can download the post as PDF, ePub and mobi](https://github.com/soderlind/read-offline) (9)# 
+#[Date Range field for Ninja Forms](https://github.com/soderlind/date-range-ninja-forms) (3)# 
+#[A PHP CodeSniffer sniff that checks if the global PHP functions are missing a backslash.](https://github.com/soderlind/coding-standard) (0)# 
+##[ES6 WordPress Ajax Demo](https://github.com/soderlind/es6-wp-ajax-demo) (1)## 
+#[Use WordPress Customizer to add JavaScript](https://github.com/soderlind/additional-javascript) (3)# 
+##[WP-DenyHost denies a spammer from accessing your WordPress blog](https://github.com/soderlind/wp-denyhost) (1)## 
+#[Ninja Forms Action for DSS Events](https://github.com/soderlind/ninja-forms-dss-event-action) (0)# 
+##[WordPress Customizer Toggle Control is a generic toggle control you can use to replace the checkbox control.](https://github.com/soderlind/class-customizer-toggle-control) (13)## 
+#[Activate ACF PRO license using WP CLI](https://github.com/soderlind/wp-cli-acfpro-activate) (0)# 
+#[Convert an WordPress Export File to PDF](https://github.com/soderlind/wxr2pdf) (0)# 
+##[WordPress Customizer Range Value Control is a generic range with value control you can use to replace the default range control.](https://github.com/soderlind/class-customizer-range-value-control) (10)## 
+##[An add-in that gives you full Polylang support in WordPress customizer.](https://github.com/soderlind/customizer-polylang) (16)## 
+#[Automatically Activate SearchWP on Subsite](https://github.com/soderlind/ms-searchwp-subsite-activate) (0)# 
+###[PHP Code Beautifier and Fixer for Visual Studio Code](https://github.com/soderlind/vscode-phpcbf) (8)### 
+#[The plugin makes it possible to link to a playlist item ](https://github.com/soderlind/wp-link-to-playlist-item) (0)# 
+#[Demo plugin to show how to implement your custom permalink for your WordPress plugin.](https://github.com/soderlind/my-permalink-demo) (0)# 
+##[Cloud2PNG captures snapshots of any website using the Cloudinary URL2PNG add-on](https://github.com/soderlind/cloud2png) (1)## 
+##[WordPress Debug Bar, List Script & Style Dependencies](https://github.com/soderlind/debug-bar-list-dependencies) (1)## 
+#[WordPress shortcode that creates a Delicious tag cloud or a list of tags](https://github.com/soderlind/delicious-tagroll-shortcode) (0)# 
+#[Replace the default Metro Share social icons with icomoon social fonts](https://github.com/soderlind/metro-share-social-fonts) (0)# 
 <!-- plugins ends -->
 
 More on [soderlind.no](https://soderlind.no/)

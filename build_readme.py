@@ -100,7 +100,6 @@ if __name__ == "__main__":
 	md = "\n".join(
 		[
 			"[{font_size}{description}]({url}) ({fork_count}){font_size} ".format(**plugin)
-				**plugin)
 			for plugin in plugins[:20]
 		]
 	)

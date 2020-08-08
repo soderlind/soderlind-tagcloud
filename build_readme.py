@@ -94,7 +94,7 @@ if __name__ == "__main__":
         ]
     )
     readme_contents = readme.open().read()
-    rewritten = replace_chunk(readme_contents, "recent_releases", md)
+    rewritten = replace_chunk(readme_contents, "plugins", md)
 
     readme.open("w").write(rewritten)
 

@@ -77,7 +77,7 @@ def fetch_plugins(oauth_token):
 						"repo": repo["name"],
 						"url": repo["url"],
 						"plugin_url": plugin_url,
-						"font_size": (repo["forkCount"] % 8) * 16,
+						"font_size": "#" * ((repo["forkCount"] % 3) + 1),
 						"description": repo["description"],
 						"pushed_at": repo["pushedAt"],
 						"fork_count": repo["forkCount"],
@@ -97,8 +97,7 @@ if __name__ == "__main__":
 	plugins.sort(key=lambda r: r["pushed_at"], reverse=True)
 	md = "\n".join(
 		[
-			# "[{description}]({url}) ({fork_count}) | ".format(**plugin)
-			"<a href='{url}' style='font-size:{font_size}px;'>{description}</a> ({fork_count})".format(**plugin)
+			"{font_size}[{description}]({url}) ({fork_count}){font_size} ".format(**plugin)
 			for plugin in plugins[:20]
 		]
 	)

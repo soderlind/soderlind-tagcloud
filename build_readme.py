@@ -3,7 +3,6 @@ import feedparser
 import tweepy
 import time
 import httpx
-import requests
 import json
 import pathlib
 import re
@@ -72,7 +71,7 @@ def fetch_plugins(oauth_token):
 			plugin_url = repo["url"] + "/" + repo["name"] + ".php"
 			# if repo["description"] != "None" and requests.get(plugin_url, headers=headers).status_code == 200:
 			# if "".__ne__(repo["description"]):
-			if len(str(repo["description"])) > 4 and requests.get(plugin_url, headers=headers).status_code == 200:
+			if len(str(repo["description"])) > 4:
 				plugins.append(
 					{
 						"repo": repo["name"],

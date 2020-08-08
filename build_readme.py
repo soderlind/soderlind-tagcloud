@@ -97,7 +97,7 @@ if __name__ == "__main__":
 	plugins.sort(key=lambda r: r["pushed_at"], reverse=True)
 	md = "\n".join(
 		[
-			"* [{description}]({url}) ({fork_count})".format(**plugin)
+			"[{description}]({url}) ({fork_count}) | ".format(**plugin)
 			for plugin in plugins
 		]
 	)
@@ -105,35 +105,3 @@ if __name__ == "__main__":
 	rewritten = replace_chunk(readme_contents, "plugins", md)
 
 	readme.open("w").write(rewritten)
-
-# # Write out full project-plugins.md file
-# project_plugins_md = "\n".join(
-#	 [
-#		 (
-#			 "* **[{repo}]({repo_url})**: [{release}]({url}) - {published_day}\n"
-#			 "<br>{description}"
-#		 ).format(**release)
-#		 for release in plugins
-#	 ]
-# )
-# project_plugins_content = project_plugins.open().read()
-# project_plugins_content = replace_chunk(
-#	 project_plugins_content, "recent_plugins", project_plugins_md
-# )
-# project_plugins_content = replace_chunk(
-#	 project_plugins_content, "release_count", str(len(plugins)), inline=True
-# )
-# project_plugins.open("w").write(project_plugins_content)
-
-# tils = fetch_tils()
-# tils_md = "\n".join(
-#	 [
-#		 "* [{title}]({url}) - {created_at}".format(
-#			 title=til["title"],
-#			 url=til["url"],
-#			 created_at=til["created_utc"].split("T")[0],
-#		 )
-#		 for til in tils
-#	 ]
-# )
-# rewritten = replace_chunk(rewritten, "tils", tils_md)

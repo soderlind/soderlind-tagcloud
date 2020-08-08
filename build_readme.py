@@ -13,10 +13,6 @@ client = GraphqlClient(endpoint="https://api.github.com/graphql")
 
 
 TOKEN = os.environ.get("SODERLIND_TOKEN", "")
-TWITTER_CONSUMER_KEY = os.environ.get("TWITTER_CONSUMER_KEY", "")
-TWITTER_CONSUMER_SECRET = os.environ.get("TWITTER_CONSUMER_SECRET", "")
-TWITTER_ACCESS_TOKEN = os.environ.get("TWITTER_ACCESS_TOKEN", "")
-TWITTER_ACCESS_TOKEN_SECRET = os.environ.get("TWITTER_ACCESS_TOKEN_SECRET", "")
 
 
 def replace_chunk(content, marker, chunk, inline=False):
@@ -35,25 +31,16 @@ def make_query(after_cursor=None):
     return """
 query {
   viewer {
-	repositories(first: 100, privacy: PUBLIC, after:AFTER) {
-	  pageInfo {
-		hasNextPage
-		endCursor
-	  }
-	  nodes {
-		name
-		description
-		url
-		releases(last:1) {
-		  totalCount
-		  nodes {
-			name
-			publishedAt
-			url
-		  }
-		}
-	  }
-	}
+    repositories(first: 100, orderBy: {field:PUSHED_AT, direction:DESC}, privacy: PUBLIC, isFork: false,after:AFTER) {
+      pageInfo {hasNextPage, endCursor}
+      nodes {
+        name
+        description
+        pushedAt
+        url
+        forkCount
+      }
+    }
   }
 }
 """.replace(
@@ -61,9 +48,9 @@ query {
     )
 
 
-def fetch_releases(oauth_token):
+def fetch_plugins(oauth_token):
     repos = []
-    releases = []
+    plugins = []
     repo_names = set()
     has_next_page = True
     after_cursor = None
@@ -80,19 +67,14 @@ def fetch_releases(oauth_token):
             if repo["releases"]["totalCount"] and repo["name"] not in repo_names:
                 repos.append(repo)
                 repo_names.add(repo["name"])
-                releases.append(
+                plugins.append(
                     {
                         "repo": repo["name"],
-                        "repo_url": repo["url"],
+                        "url": repo["url"],
                         "description": repo["description"],
-                        "release": repo["releases"]["nodes"][0]["name"]
-                        .replace(repo["name"], "")
-                        .strip(),
-                        "published_at": repo["releases"]["nodes"][0]["publishedAt"],
-                        "published_day": repo["releases"]["nodes"][0][
-                            "publishedAt"
-                        ].split("T")[0],
-                        "url": repo["releases"]["nodes"][0]["url"],
+                        "date": repo["pushedAt"],
+                        "forkCount": repo["forkCount"],
+
                     }
                 )
         has_next_page = data["data"]["viewer"]["repositories"]["pageInfo"][
@@ -102,89 +84,19 @@ def fetch_releases(oauth_token):
     return releases
 
 
-# def fetch_tils():
-#     sql = "select title, url, created_utc from til order by created_utc desc limit 5"
-#     return httpx.get(
-#         "https://til.simonwillison.net/til.json",
-#         params={"sql": sql, "_shape": "array",},
-#     ).json()
-def fetch_tweets():
-    auth = tweepy.OAuthHandler(TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET)
-    auth.set_access_token(TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET)
-    api = tweepy.API(auth)
-    return [
-        {
-            "title": entry.text.translate({ord(c): None for c in '\n\t\r'}),
-            # "url": entry.entities["urls"][0]["expanded_url"],
-            # "url": ' '.join(url['url'] for url in entry.entities["urls"])
-           	"url": 'https://twitter.com/user/status/' + entry.id_str,
-            "published": entry.created_at.strftime('%d.%m.%Y'),
-        }
-		for entry in api.user_timeline('soderlind')
-    ]
-
-
-def fetch_read():
-    entries = feedparser.parse(
-        "https://getpocket.com/users/soderlind/feed/all")["entries"]
-    return [
-        {
-            "title": entry["title"],
-            "url": entry["link"].split("#")[0],
-            "published": time.strftime('%d.%m.%Y', entry["updated_parsed"]),
-        }
-        for entry in entries
-    ]
-
-
-def fetch_blog_entries():
-    entries = feedparser.parse("https://soderlind.no/feed.xml")["entries"]
-    return [
-        {
-            "title": entry["title"],
-            "url": entry["link"].split("#")[0],
-            "published": time.strftime('%d.%m.%Y', entry["updated_parsed"]),
-        }
-        for entry in entries
-    ]
-
-
 if __name__ == "__main__":
     readme = root / "README.md"
-    project_releases = root / "releases.md"
+    # project_releases = root / "releases.md"
     releases = fetch_releases(TOKEN)
     releases.sort(key=lambda r: r["published_at"], reverse=True)
-    # md = "\n".join(
-    #     [
-    #         "* [{repo} {release}]({url}) - {published_day}".format(**release)
-    #         for release in releases[:8]
-    #     ]
-    # )
-    # readme_contents = readme.open().read()
-    # rewritten = replace_chunk(readme_contents, "recent_releases", md)
-
-    entries = fetch_tweets()[:5]
-
-    tweet_md = "\n".join(
-        ["* [{title}]({url}) - {published}".format(**entry)
-         for entry in entries]
+    md = "\n".join(
+        [
+            "* [{description}]({url}) ({forkCount})".format(**release)
+            for release in releases[:8]
+        ]
     )
     readme_contents = readme.open().read()
-    rewritten = replace_chunk(readme_contents, "tweet", tweet_md)
-
-    entries = fetch_read()[:5]
-    read_md = "\n".join(
-        ["* [{title}]({url}) - {published}".format(**entry)
-         for entry in entries]
-    )
-    rewritten = replace_chunk(rewritten, "read", read_md)
-
-    entries = fetch_blog_entries()[:5]
-    entries_md = "\n".join(
-        ["* [{title}]({url}) - {published}".format(**entry)
-         for entry in entries]
-    )
-    rewritten = replace_chunk(rewritten, "blog", entries_md)
+    rewritten = replace_chunk(readme_contents, "recent_releases", md)
 
     readme.open("w").write(rewritten)
 

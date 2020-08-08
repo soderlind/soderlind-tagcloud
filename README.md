@@ -4,11 +4,14 @@
 
 ### My WordPress plugins
 <!-- plugins starts -->
-* [How to import native ES modules in WordPress](https://soderlind.no/how-to-import-native-es-modules-in-wordpress/) - 04.12.2019
-* [add_theme_support( 'disable_block_style')](https://soderlind.no/add-theme-support-disable-block-style/) - 07.11.2019
-* [Hide block styles in Gutenberg](https://soderlind.no/hide-block-styles-in-gutenberg/) - 18.10.2019
-* [Local by Flywheel: Using WordMove to mirror sites](https://soderlind.no/local-by-flywheel-using-wordmove-to-mirror-sites/) - 30.09.2019
-* [Learn to code!](https://soderlind.no/learn-to-code/) - 21.12.2018
+* [None](https://github.com/soderlind/soderlind-tagcloud) (0)
+* [None](https://github.com/soderlind/soderlind) (0)
+* [Read Offline allows you to download or print posts and pages. You can download the post as PDF, ePub and mobi](https://github.com/soderlind/read-offline) (9)
+* [Date Range field for Ninja Forms](https://github.com/soderlind/date-range-ninja-forms) (3)
+* [None](https://github.com/soderlind/azure-insights-handler-wonolog) (0)
+* [None](https://github.com/soderlind/dss-mime-aliases) (0)
+* [A PHP CodeSniffer sniff that checks if the global PHP functions are missing a backslash.](https://github.com/soderlind/coding-standard) (0)
+* [ES6 WordPress Ajax Demo](https://github.com/soderlind/es6-wp-ajax-demo) (1)
 <!-- plugins ends -->
 
 More on [soderlind.no](https://soderlind.no/)

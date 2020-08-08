@@ -71,7 +71,7 @@ def fetch_plugins(oauth_token):
 		for repo in data["data"]["viewer"]["repositories"]["nodes"]:
 			plugin_url = repo["url"] + "/" + repo["name"] + ".php"
 			# if repo["description"] != "None" and requests.get(plugin_url, headers=headers).status_code == 200:
-			if "".__ne__(repo["description"]):
+			if "None".__eq__(repo["description"]):
 				plugins.append(
 					{
 						"repo": repo["name"],

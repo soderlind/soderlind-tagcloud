@@ -84,13 +84,13 @@ def fetch_plugins(oauth_token):
 
 if __name__ == "__main__":
     readme = root / "README.md"
-    # project_releases = root / "releases.md"
-    releases = fetch_plugins(TOKEN)
-    releases.sort(key=lambda r: r["pushed_at"], reverse=True)
+    # project_plugins = root / "plugins.md"
+    plugins = fetch_plugins(TOKEN)
+    plugins.sort(key=lambda r: r["pushed_at"], reverse=True)
     md = "\n".join(
         [
             "* [{description}]({url}) ({fork_count})".format(**release)
-            for release in releases[:8]
+            for release in plugins
         ]
     )
     readme_contents = readme.open().read()
@@ -98,24 +98,24 @@ if __name__ == "__main__":
 
     readme.open("w").write(rewritten)
 
-# # Write out full project-releases.md file
-# project_releases_md = "\n".join(
+# # Write out full project-plugins.md file
+# project_plugins_md = "\n".join(
 #     [
 #         (
 #             "* **[{repo}]({repo_url})**: [{release}]({url}) - {published_day}\n"
 #             "<br>{description}"
 #         ).format(**release)
-#         for release in releases
+#         for release in plugins
 #     ]
 # )
-# project_releases_content = project_releases.open().read()
-# project_releases_content = replace_chunk(
-#     project_releases_content, "recent_releases", project_releases_md
+# project_plugins_content = project_plugins.open().read()
+# project_plugins_content = replace_chunk(
+#     project_plugins_content, "recent_plugins", project_plugins_md
 # )
-# project_releases_content = replace_chunk(
-#     project_releases_content, "release_count", str(len(releases)), inline=True
+# project_plugins_content = replace_chunk(
+#     project_plugins_content, "release_count", str(len(plugins)), inline=True
 # )
-# project_releases.open("w").write(project_releases_content)
+# project_plugins.open("w").write(project_plugins_content)
 
 # tils = fetch_tils()
 # tils_md = "\n".join(

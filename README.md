@@ -1,4 +1,4 @@
- Read [my blog](https://soderlind.no/) or [follow @soderlind on Twitter](https://twitter.com/soderlind).
+ Read [my blog](https://soderlind.no/) or [follow me on Twitter](https://twitter.com/soderlind).
 
 
 

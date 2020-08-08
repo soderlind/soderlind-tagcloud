@@ -64,18 +64,17 @@ def fetch_plugins(oauth_token):
         print(json.dumps(data, indent=4))
         print()
         for repo in data["data"]["viewer"]["repositories"]["nodes"]:
-			repos.append(repo)
-			repo_names.add(repo["name"])
-			plugins.append(
-				{
-					"repo": repo["name"],
-					"url": repo["url"],
-					"description": repo["description"],
-					"pushed_at": repo["pushedAt"],
-					"fork_count": repo["forkCount"],
 
-				}
-			)
+            plugins.append(
+                {
+                    "repo": repo["name"],
+                    "url": repo["url"],
+                    "description": repo["description"],
+                    "pushed_at": repo["pushedAt"],
+                    "fork_count": repo["forkCount"],
+
+                }
+            )
         has_next_page = data["data"]["viewer"]["repositories"]["pageInfo"][
             "hasNextPage"
         ]

@@ -98,7 +98,7 @@ if __name__ == "__main__":
 	md = "\n".join(
 		[
 			# "[{description}]({url}) ({fork_count}) | ".format(**plugin)
-			"<a href="{url}" style="font-size:{font_size}px;">{description}</a> ({fork_count}) | ".format(**plugin)
+			"<a href='{url}' style='font-size:{font_size}px;'>{description}</a> ({fork_count})".format(**plugin)
 			for plugin in plugins[:20]
 		]
 	)

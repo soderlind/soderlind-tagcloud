@@ -49,15 +49,9 @@ query {
 
 
 def fetch_plugins(oauth_token):
-	repos = []
 	plugins = []
-	repo_names = set()
 	has_next_page = True
 	after_cursor = None
-
-
-	headers = {
-	'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36'}
 
 	while has_next_page:
 		data = client.execute(
@@ -68,18 +62,12 @@ def fetch_plugins(oauth_token):
 		print(json.dumps(data, indent=4))
 		print()
 		for iteration, repo in data["data"]["viewer"]["repositories"]["nodes"]:
-			# plugin_url = repo["url"] + "/" + repo["name"] + ".php"
-			# if repo["description"] != "None" and requests.get(plugin_url, headers=headers).status_code == 200:
-			# if "".__ne__(repo["description"]):
-
-
-
 			if len(str(repo["description"])) > 4:
 				plugins.append(
 					{
 						"repo": repo["name"],
 						"url": repo["url"],
-						"font_size": "**" if iteration % 2 else "",
+						"font_size": "**" if iteration % 2 == 0 else "",
 						"description": repo["description"],
 						"pushed_at": repo["pushedAt"],
 						"fork_count": repo["forkCount"],

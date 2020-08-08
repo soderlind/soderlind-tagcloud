@@ -67,17 +67,19 @@ def fetch_plugins(oauth_token):
 		print()
 		print(json.dumps(data, indent=4))
 		print()
-		for repo in data["data"]["viewer"]["repositories"]["nodes"]:
-			plugin_url = repo["url"] + "/" + repo["name"] + ".php"
+		for iteration, repo in data["data"]["viewer"]["repositories"]["nodes"]:
+			# plugin_url = repo["url"] + "/" + repo["name"] + ".php"
 			# if repo["description"] != "None" and requests.get(plugin_url, headers=headers).status_code == 200:
 			# if "".__ne__(repo["description"]):
+
+
+
 			if len(str(repo["description"])) > 4:
 				plugins.append(
 					{
 						"repo": repo["name"],
 						"url": repo["url"],
-						"plugin_url": plugin_url,
-						"font_size": ((repo["forkCount"] % 4) + 2),
+						"font_size": "**" if iteration % 2 else "",
 						"description": repo["description"],
 						"pushed_at": repo["pushedAt"],
 						"fork_count": repo["forkCount"],
@@ -97,8 +99,7 @@ if __name__ == "__main__":
 	plugins.sort(key=lambda r: r["pushed_at"], reverse=True)
 	md = "\n".join(
 		[
-			# "<h{font_size}>[{description}]({url}) ({fork_count})</h{font_size}> ".format(**plugin)
-			"<h{font_size} class='pl-mi2'><a  href={url}>{description}</a></h{font_size}> ".format(
+			"[{font_size}{description}]({url}) ({fork_count}){font_size} ".format(**plugin)
 				**plugin)
 			for plugin in plugins[:20]
 		]

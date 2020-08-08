@@ -90,8 +90,8 @@ if __name__ == "__main__":
 	plugins.sort(key=lambda r: r["pushed_at"], reverse=True)
 	md = "\n".join(
 		[
-			"* [{description}]({url}) ({fork_count})".format(**release)
-			for release in plugins
+			"* [{description}]({url}) ({fork_count})".format(**plugin)
+			for plugin in plugins
 		]
 	)
 	readme_contents = readme.open().read()

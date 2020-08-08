@@ -72,8 +72,8 @@ def fetch_plugins(oauth_token):
                         "repo": repo["name"],
                         "url": repo["url"],
                         "description": repo["description"],
-                        "date": repo["pushedAt"],
-                        "forkCount": repo["forkCount"],
+                        "pushed_at": repo["pushedAt"],
+                        "fork_count": repo["forkCount"],
 
                     }
                 )
@@ -81,17 +81,17 @@ def fetch_plugins(oauth_token):
             "hasNextPage"
         ]
         after_cursor = data["data"]["viewer"]["repositories"]["pageInfo"]["endCursor"]
-    return releases
+    return plugins
 
 
 if __name__ == "__main__":
     readme = root / "README.md"
     # project_releases = root / "releases.md"
-    releases = fetch_releases(TOKEN)
-    releases.sort(key=lambda r: r["published_at"], reverse=True)
+    releases = fetch_plugins(TOKEN)
+    releases.sort(key=lambda r: r["pushed_at"], reverse=True)
     md = "\n".join(
         [
-            "* [{description}]({url}) ({forkCount})".format(**release)
+            "* [{description}]({url}) ({fork_count})".format(**release)
             for release in releases[:8]
         ]
     )

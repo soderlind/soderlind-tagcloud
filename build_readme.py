@@ -61,10 +61,9 @@ def fetch_plugins(oauth_token):
 		print()
 		print(json.dumps(data, indent=4))
 		print()
-		for iteration, repo in data["data"]["viewer"]["repositories"]["nodes"]:
+		for i, repo in enumerate(data["data"]["viewer"]["repositories"]["nodes"]):
 			if len(str(repo["description"])) > 4:
-				# bold = "**" if iteration % 2 == 0 else ""
-				bold = "**"
+				bold = "**" if i % 2 == 0 else ""
 				plugins.append(
 					{
 						"repo": repo["name"],

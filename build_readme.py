@@ -64,7 +64,8 @@ def fetch_plugins(oauth_token):
 		i = 0
 		# for i, repo in enumerate(data["data"]["viewer"]["repositories"]["nodes"]):
 		for repo in data["data"]["viewer"]["repositories"]["nodes"]:
-			if len(str(repo["description"])) > 4:
+			plugin_url = repo["url"] + "/blob/master/" + repo["name"] + ".php"
+			if len(str(repo["description"])) > 4 and httpx.get(plugin_url).status_code == 200:
 				plugins.append(
 					{
 						"repo": repo["name"],

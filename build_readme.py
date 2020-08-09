@@ -63,11 +63,12 @@ def fetch_plugins(oauth_token):
 		print()
 		for iteration, repo in data["data"]["viewer"]["repositories"]["nodes"]:
 			if len(str(repo["description"])) > 4:
+				bold = "**" if iteration % 2 == 0 else ""
 				plugins.append(
 					{
 						"repo": repo["name"],
 						"url": repo["url"],
-						"font_size": "**" if iteration % 2 == 0 else "",
+						"font_size": bold,
 						"description": repo["description"],
 						"pushed_at": repo["pushedAt"],
 						"fork_count": repo["forkCount"],

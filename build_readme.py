@@ -63,7 +63,8 @@ def fetch_plugins(oauth_token):
 		print()
 		for iteration, repo in data["data"]["viewer"]["repositories"]["nodes"]:
 			if len(str(repo["description"])) > 4:
-				bold = "**" if iteration % 2 == 0 else ""
+				# bold = "**" if iteration % 2 == 0 else ""
+				bold = "**"
 				plugins.append(
 					{
 						"repo": repo["name"],
@@ -83,7 +84,6 @@ def fetch_plugins(oauth_token):
 
 if __name__ == "__main__":
 	readme = root / "README.md"
-	# project_plugins = root / "plugins.md"
 	plugins = fetch_plugins(TOKEN)
 	plugins.sort(key=lambda r: r["pushed_at"], reverse=True)
 	md = "\n".join(

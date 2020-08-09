@@ -63,12 +63,12 @@ def fetch_plugins(oauth_token):
 		print()
 		for i, repo in enumerate(data["data"]["viewer"]["repositories"]["nodes"]):
 			if len(str(repo["description"])) > 4:
-				bold = "**" if i % 2 == 0 else ""
+				font_format = "**" if i % 2 == 0 else "*"
 				plugins.append(
 					{
 						"repo": repo["name"],
 						"url": repo["url"],
-						"font_size": bold,
+						"font_format": font_format,
 						"description": repo["description"],
 						"pushed_at": repo["pushedAt"],
 						"fork_count": repo["forkCount"],
@@ -87,8 +87,7 @@ if __name__ == "__main__":
 	plugins.sort(key=lambda r: r["pushed_at"], reverse=True)
 	md = "\n".join(
 		[
-			"[{font_size}{description}{font_size}]({url}) ".format(
-				**plugin)
+			"[{font_format}{description}{font_format}]({url}) ".format(**plugin)
 			for plugin in plugins[:20]
 		]
 	)

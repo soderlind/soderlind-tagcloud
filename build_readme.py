@@ -70,7 +70,7 @@ def fetch_plugins(oauth_token):
 						"repo": repo["name"],
 						"url": repo["url"],
 						"font_format": "**" if i % 2 == 0 else "*",
-						"description": repo["description"],
+						"description": repo["description"].strip(),
 						"pushed_at": repo["pushedAt"],
 						"fork_count": repo["forkCount"],
 					}

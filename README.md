@@ -18,7 +18,7 @@
 [*An add-in that gives you full Polylang support in WordPress customizer.*](https://github.com/soderlind/customizer-polylang) &nbsp;&nbsp;&nbsp;
 [**Automatically Activate SearchWP on Subsite**](https://github.com/soderlind/ms-searchwp-subsite-activate) &nbsp;&nbsp;&nbsp;
 [*PHP Code Beautifier and Fixer for Visual Studio Code*](https://github.com/soderlind/vscode-phpcbf) &nbsp;&nbsp;&nbsp;
-[**The plugin makes it possible to link to a playlist item **](https://github.com/soderlind/wp-link-to-playlist-item) &nbsp;&nbsp;&nbsp;
+[**The plugin makes it possible to link to a playlist item**](https://github.com/soderlind/wp-link-to-playlist-item) &nbsp;&nbsp;&nbsp;
 [*Demo plugin to show how to implement your custom permalink for your WordPress plugin.*](https://github.com/soderlind/my-permalink-demo) &nbsp;&nbsp;&nbsp;
 [**Cloud2PNG captures snapshots of any website using the Cloudinary URL2PNG add-on**](https://github.com/soderlind/cloud2png) &nbsp;&nbsp;&nbsp;
 [*WordPress Debug Bar, List Script & Style Dependencies*](https://github.com/soderlind/debug-bar-list-dependencies) &nbsp;&nbsp;&nbsp;

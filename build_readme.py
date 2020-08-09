@@ -75,7 +75,7 @@ def fetch_plugins(oauth_token):
 						"fork_count": repo["forkCount"],
 					}
 				)
-				i++
+				i = i+1
 		has_next_page = data["data"]["viewer"]["repositories"]["pageInfo"][
 			"hasNextPage"
 		]

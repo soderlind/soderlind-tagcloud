@@ -87,7 +87,8 @@ if __name__ == "__main__":
 	plugins.sort(key=lambda r: r["pushed_at"], reverse=True)
 	md = "\n".join(
 		[
-			"[{font_size}{description}]({url}) ({fork_count}){font_size} ".format(**plugin)
+			"[{font_size}{description}{font_size}]({url}) ".format(
+				**plugin)
 			for plugin in plugins[:20]
 		]
 	)

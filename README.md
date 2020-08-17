@@ -6,7 +6,7 @@
 <!-- plugins starts -->
 [**Read Offline allows you to download or print posts and pages. You can download the post as PDF, ePub and mobi**](https://github.com/soderlind/read-offline) &nbsp;&nbsp;&nbsp;
 [*Date Range field for Ninja Forms*](https://github.com/soderlind/date-range-ninja-forms) &nbsp;&nbsp;&nbsp;
-[**ES6 WordPress Ajax Demo**](https://github.com/soderlind/es6-wp-ajax-demo) &nbsp;&nbsp;&nbsp;
+[**WordPress Ajax using native JavaScript**](https://github.com/soderlind/es6-wp-ajax-demo) &nbsp;&nbsp;&nbsp;
 [*Use WordPress Customizer to add JavaScript*](https://github.com/soderlind/additional-javascript) &nbsp;&nbsp;&nbsp;
 [**WP-DenyHost denies a spammer from accessing your WordPress blog**](https://github.com/soderlind/wp-denyhost) &nbsp;&nbsp;&nbsp;
 [*Ninja Forms Action for DSS Events*](https://github.com/soderlind/ninja-forms-dss-event-action) &nbsp;&nbsp;&nbsp;

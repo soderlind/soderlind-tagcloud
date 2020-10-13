@@ -5,16 +5,16 @@
 ### My WordPress plugins
 <!-- plugins starts -->
 [**Date Range field for Ninja Forms**](https://github.com/soderlind/date-range-ninja-forms) &nbsp;&nbsp;&nbsp;
+[*Use WordPress Customizer to add JavaScript*](https://github.com/soderlind/additional-javascript) &nbsp;&nbsp;&nbsp;
+[**Read Offline allows you to download or print posts and pages. You can download the post as PDF, ePub and mobi**](https://github.com/soderlind/read-offline) &nbsp;&nbsp;&nbsp;
+[*An add-in that gives you full Polylang support in WordPress customizer.*](https://github.com/soderlind/customizer-polylang) &nbsp;&nbsp;&nbsp;
+[**WordPress Ajax using native JavaScript**](https://github.com/soderlind/es6-wp-ajax-demo) &nbsp;&nbsp;&nbsp;
 [*Activate ACF PRO license using WP CLI*](https://github.com/soderlind/wp-cli-acfpro-activate) &nbsp;&nbsp;&nbsp;
 [**Google Tag Manager Multisite Admin is an add-on to DuracellTomi's Google Tag Manager for WordPress plugin**](https://github.com/soderlind/gtm-multisite-admin) &nbsp;&nbsp;&nbsp;
 [*Ninja Forms Action for DSS Events*](https://github.com/soderlind/ninja-forms-dss-event-action) &nbsp;&nbsp;&nbsp;
-[**WordPress Ajax using native JavaScript**](https://github.com/soderlind/es6-wp-ajax-demo) &nbsp;&nbsp;&nbsp;
-[*Read Offline allows you to download or print posts and pages. You can download the post as PDF, ePub and mobi*](https://github.com/soderlind/read-offline) &nbsp;&nbsp;&nbsp;
-[**Use WordPress Customizer to add JavaScript**](https://github.com/soderlind/additional-javascript) &nbsp;&nbsp;&nbsp;
-[*WP-DenyHost denies a spammer from accessing your WordPress blog*](https://github.com/soderlind/wp-denyhost) &nbsp;&nbsp;&nbsp;
-[**WordPress Customizer Toggle Control is a generic toggle control you can use to replace the checkbox control.**](https://github.com/soderlind/class-customizer-toggle-control) &nbsp;&nbsp;&nbsp;
-[*WordPress Customizer Range Value Control is a generic range with value control you can use to replace the default range control.*](https://github.com/soderlind/class-customizer-range-value-control) &nbsp;&nbsp;&nbsp;
-[**An add-in that gives you full Polylang support in WordPress customizer.**](https://github.com/soderlind/customizer-polylang) &nbsp;&nbsp;&nbsp;
+[**WP-DenyHost denies a spammer from accessing your WordPress blog**](https://github.com/soderlind/wp-denyhost) &nbsp;&nbsp;&nbsp;
+[*WordPress Customizer Toggle Control is a generic toggle control you can use to replace the checkbox control.*](https://github.com/soderlind/class-customizer-toggle-control) &nbsp;&nbsp;&nbsp;
+[**WordPress Customizer Range Value Control is a generic range with value control you can use to replace the default range control.**](https://github.com/soderlind/class-customizer-range-value-control) &nbsp;&nbsp;&nbsp;
 [*Automatically Activate SearchWP on Subsite*](https://github.com/soderlind/ms-searchwp-subsite-activate) &nbsp;&nbsp;&nbsp;
 [**The plugin makes it possible to link to a playlist item**](https://github.com/soderlind/wp-link-to-playlist-item) &nbsp;&nbsp;&nbsp;
 [*Demo plugin to show how to implement your custom permalink for your WordPress plugin.*](https://github.com/soderlind/my-permalink-demo) &nbsp;&nbsp;&nbsp;
